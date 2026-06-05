@@ -1,0 +1,130 @@
+  body {
+        font-family: Arial, sans-serif;
+        background-color: cadetblue;
+        background-size: cover !important;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    h1
+     {
+        color: #ffffff !important;
+    }
+    p {
+        color: #ffffff !important;
+    }
+
+    .modal p {
+    color: #000000 !important;
+}
+
+    .modal-content {
+        background-color: cadetblue !important;
+    }
+
+    .catPicture {
+        width: 300px;
+        height: 375px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+html {
+    overflow-x: hidden;
+}
+
+.loop {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    display: wrap;
+    width: max-content;
+    overflow: hidden;
+}
+
+.navbar-collapse {
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    padding: 15px; 
+    background-color: #333; 
+    color: white;
+}
+
+.catgrid, .cartgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.catgrid h3 {
+    min-height: 90px; /* adjust as needed */
+    margin-bottom: 10px;
+}
+
+.catgrid img, .cartgrid img {
+    background-color: rgb(35, 120, 55);
+    height: 200px;
+    width: 100%;
+    padding: 10px;
+    object-fit: cover;
+    object-position: center;
+    box-sizing: border-box;
+}
+
+.SmallText {
+    background-color: slategray;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.catgrid div, .cartgrid div {
+    background-color: cadetblue;
+    text-align: center;
+    padding: 20px;
+    gap:10px;
+}
+
+.pagination a {
+  color: rgb(255, 255, 255);
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  background-color: silver;
+}
+
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .catgrid, .cartgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .catgrid, .cartgrid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+}
